@@ -2,35 +2,34 @@
 """
 Fabric script based on the file 2-do_deploy_web_static.py that creates and
 distributes an archive to the web servers
-
-execute: fab -f 3-deploy_web_static.py deploy -i ~/.ssh/id_rsa -u ubuntu
 """
 
-from fabric.api import env, local, put, run
+from fabric.api import env, run, put
 from datetime import datetime
-from os.path import exists, isdir
-env.hosts = ['107.22.146.20', '18.234.105.178']
+from os.path import exists
+import os
+
+env.hosts = ['18.234.105.178', '107.22.146.20']
 
 
 def do_pack():
-    """generates a tgz archive"""
+    """Generates a tgz archive"""
     try:
         date = datetime.now().strftime("%Y%m%d%H%M%S")
-        if isdir("versions") is False:
-            local("mkdir versions")
         file_name = "versions/web_static_{}.tgz".format(date)
-        local("tar -cvzf {} web_static".format(file_name))
+        os.makedirs("versions", exist_ok=True)
+        os.system("tar -cvzf {} web_static".format(file_name))
         return file_name
     except:
         return None
 
 
 def do_deploy(archive_path):
-    """distributes an archive to the web servers"""
-    if exists(archive_path) is False:
+    """Distributes an archive to the web servers"""
+    if not exists(archive_path):
         return False
     try:
-        file_n = archive_path.split("/")[-1]
+        file_n = os.path.basename(archive_path)
         no_ext = file_n.split(".")[0]
         path = "/data/web_static/releases/"
         put(archive_path, '/tmp/')
@@ -47,7 +46,7 @@ def do_deploy(archive_path):
 
 
 def deploy():
-    """creates and distributes an archive to the web servers"""
+    """Creates and distributes an archive to the web servers"""
     archive_path = do_pack()
     if archive_path is None:
         return False
