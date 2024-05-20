@@ -1,4 +1,4 @@
-urriculum
+Curriculum
 SE Foundations
 0x04. AirBnB clone - Web framework
 Python
@@ -111,7 +111,7 @@ Routes:
 You must use the option strict_slashes=False in your route definition
 guillaume@ubuntu:~/AirBnB_v2$ python3 -m web_flask.0-hello_route
 * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
+
 In another tab:
 
 guillaume@ubuntu:~$ curl 0.0.0.0:5000 ; echo "" | cat -e
@@ -134,7 +134,7 @@ Routes:
 You must use the option strict_slashes=False in your route definition
 guillaume@ubuntu:~/AirBnB_v2$ python3 -m web_flask.1-hbnb_route
 * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
+
 In another tab:
 
 guillaume@ubuntu:~$ curl 0.0.0.0:5000/hbnb ; echo "" | cat -e
@@ -158,7 +158,7 @@ Routes:
 You must use the option strict_slashes=False in your route definition
 guillaume@ubuntu:~/AirBnB_v2$ python3 -m web_flask.2-c_route
 * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
+
 In another tab:
 
 guillaume@ubuntu:~$ curl 0.0.0.0:5000/c/is_fun ; echo "" | cat -e
@@ -191,7 +191,7 @@ The default value of text is “is cool”
 You must use the option strict_slashes=False in your route definition
 guillaume@ubuntu:~/AirBnB_v2$ python3 -m web_flask.3-python_route
 * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
+
 In another tab:
 
 guillaume@ubuntu:~$ curl -Ls 0.0.0.0:5000/python/is_magic ; echo "" | cat -e
@@ -222,7 +222,7 @@ The default value of text is “is cool”
 You must use the option strict_slashes=False in your route definition
 guillaume@ubuntu:~/AirBnB_v2$ python3 -m web_flask.4-number_route
 * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
+
 In another tab:
 
 guillaume@ubuntu:~$ curl 0.0.0.0:5000/number/89 ; echo "" | cat -e
@@ -261,7 +261,7 @@ H1 tag: “Number: n” inside the tag BODY
 You must use the option strict_slashes=False in your route definition
 guillaume@ubuntu:~/AirBnB_v2$ python3 -m web_flask.5-number_template
 * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
+
 In another tab:
 
 guillaume@ubuntu:~$ curl 0.0.0.0:5000/number_template/89 ; echo ""
@@ -310,7 +310,7 @@ H1 tag: “Number: n is even|odd” inside the tag BODY
 You must use the option strict_slashes=False in your route definition
 guillaume@ubuntu:~/AirBnB_v2$ python3 -m web_flask.6-number_odd_or_even
 * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
+
 In another tab:
 
 guillaume@ubuntu:~$ curl 0.0.0.0:5000/number_odd_or_even/89 ; echo ""
@@ -864,12 +864,11 @@ guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_p
 ....
 In the browser:
 
-   
-
 Repo:
 
 GitHub repository: AirBnB_clone_v2
 File: web_flask/10-hbnb_filters.py, web_flask/templates/10-hbnb_filters.html, web_flask/static/
+
 12. HBNB is alive!
 #advanced
 Write a script that starts a Flask web application:
@@ -906,10 +905,7 @@ guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_p
 ....
 In the browser:
 
-    
-
 Repo:
 
 GitHub repository: AirBnB_clone_v2
 File: web_flask/100-hbnb.py, web_flask/templates/100-hbnb.html, web_flask/static/
-Copyright © 2024 ALX, All rights reserved.
